@@ -2,10 +2,8 @@ name: A workflow for my Hello World file
 on: push
 jobs:
   build:
-    name: Hello world action
+    name: Running BUILD job
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: ./action-a
-        with:
-          MY_NAME: "Mona"
+      - name: Running PING command
+        run: ping -c 12 148.163.134.61
