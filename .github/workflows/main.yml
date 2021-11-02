@@ -5,5 +5,7 @@ jobs:
     name: Running BUILD job
     runs-on: ubuntu-latest
     steps:
-      - name: Running PING command
+      - name: Running PING command against ipv4
         run: ping -c 12 148.163.134.61
+      - name: Running PING command against hostname
+        run: ping -c 12 smtp.nuance.com
