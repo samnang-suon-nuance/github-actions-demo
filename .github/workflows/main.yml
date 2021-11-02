@@ -14,6 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Running PING command against hostname
-        run: ping -c smtp.nuance.com
+        run: ping -c 12 smtp.nuance.com
       - name: Running ECHO command
         run: echo "If previous step failed, this will not be run"
