@@ -7,5 +7,13 @@ jobs:
     steps:
       - name: Running PING command against ipv4
         run: ping -c 12 148.163.134.61
+      - name: Running ECHO command
+        run: echo "If previous step failed, this will not be run"
+  ping:
+    name: Running PING job
+    runs-on: ubuntu-latest
+    steps:
       - name: Running PING command against hostname
-        run: ping -c 12 smtp.nuance.com
+        run: ping -c smtp.nuance.com
+      - name: Running ECHO command
+        run: echo "If previous step failed, this will not be run"
